@@ -90,7 +90,7 @@ DATABASES = {
         "NAME" : "mypoll", # 연결할 Database이름
         "USER" : "admin",  # 사용자 username
         "PASSWORD": "godnjs3246",
-        "HOST" : "mypoll-db.cpao8egeiaaj.ap-northeast-2.rds.amazonaws.com"
+        "HOST" : "mypoll-db.cpao8egeiaaj.ap-northeast-2.rds.amazonaws.com",
         "PORT" : "3306"
     }
 }
