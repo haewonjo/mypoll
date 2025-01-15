@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import pymysql
+
+pymysql.install_as_MySQLdb()
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -77,9 +81,17 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+    'sqlite3': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+    },
+    "default": {
+        "ENGIN" : "django.db.backends.mysql",
+        "NAME" : "mypoll", # 연결할 Database이름
+        "USER" : "admin",  # 사용자 username
+        "PASSWORD": "godnjs3246",
+        "HOST" : "mypoll-db.cpao8egeiaaj.ap-northeast-2.rds.amazonaws.com"
+        "PORT" : "3306"
     }
 }
 
